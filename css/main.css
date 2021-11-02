@@ -1,0 +1,288 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.7;
+}
+img {
+    width: 100%;
+}
+ul,
+ol,
+li {
+    padding: 0;
+    list-style: none;
+}
+.main-container {
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+    max-width: 500px;
+}
+.main-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.main-title + p {
+    font-size: 0.75rem;
+    display: flex;
+}
+.main-title + p::before {
+    content: "";
+    display: block;
+    background-image: url(../assets/icons/6dots.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 3.5rem;
+    height: 1rem;
+    margin: 0.5rem 0.7rem 0 0;
+}
+header img {
+    border-radius: 0.8rem;
+}
+
+.recipe-portions-time {
+    display: flex;
+    flex-wrap: wrap;
+}
+.portions-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.portions-wrapper::before {
+    content: "";
+    display: block;
+    background-image: url(../assets/icons/cutlery.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
+.portions-wrapper .title {
+    text-transform: uppercase;
+    font-size: 0.5rem;
+    color: #bdbdbd;
+    font-weight: bolder;
+}
+.portions-wrapper .servings {
+    font-size: 0.625rem;
+    font-weight: bolder;
+    color: #f2994a;
+    display: block;
+}
+
+.time-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.preparation,
+.cook,
+.total-time {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    font-size: 0.5rem;
+}
+.preparation::before,
+.cook::before,
+.total-time::before {
+    content: "";
+    display: block;
+    background-image: url(../assets/icons/watch.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 0.875rem;
+    height: 0.875rem;
+    margin-right: 0.5rem;
+}
+.time-wrapper .label {
+    font-size: 0.5rem;
+    color: #bdbdbd;
+}
+.time-wrapper .time {
+    font-size: 0.6rem;
+    color: black;
+    display: block;
+}
+
+.ingredients .title {
+    font-size: 1.125rem;
+    font-family: "Playfair Display", serif;
+    font-weight: bolder;
+}
+
+.ingredients > h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: normal;
+    margin: 1.7rem 0;
+}
+
+.first-part > li,
+.second-part > li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.ingredients input[type="checkbox"] {
+    margin-top: 0.5rem;
+    min-width: 1.25rem;
+    min-height: 1.25rem;
+    margin-right: 1rem;
+    border: 1px solid black;
+    border-radius: 20%;
+}
+
+.ingredients p {
+    margin: 0;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+.instructions h3 {
+    font-size: 1.5rem;
+    font-family: "Playfair Display", serif;
+    font-weight: bolder;
+}
+
+.instructions ol {
+    font-size: 1rem;
+    padding-left: 3rem;
+}
+
+.instructions li {
+    counter-increment: reset;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.instructions li:before {
+    content: counter(reset);
+    position: absolute;
+    left: -3.5rem;
+    background: #f2994a;
+    border-radius: 20%;
+    color: #fff;
+    width: 2.7rem;
+    font-size: 1.8rem;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+}
+.source {
+    font-size: 0.75rem;
+    color: #bdbdbd;
+}
+
+footer {
+    margin: 3rem 0;
+    text-align: center;
+    color: #bdbdbd;
+    font-size: 0.8rem;
+}
+
+footer > a {
+    color: #808080;
+    font-weight: bolder;
+    transition: color 0.2s;
+}
+
+@media screen and (min-width: 425px) {
+    .portions-wrapper::before {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .portions-wrapper .title {
+        font-size: 0.6rem;
+    }
+    .portions-wrapper .servings {
+        font-size: 0.7rem;
+    }
+
+    .preparation,
+    .cook,
+    .total-time {
+        width: 100%;
+        font-size: 0.5rem;
+    }
+    .preparation::before,
+    .cook::before,
+    .total-time::before {
+        width: 1.3rem;
+        height: 1.3rem;
+        margin-right: 0.5rem;
+    }
+
+    .time-wrapper {
+        font-size: 2rem;
+    }
+
+    .time-wrapper .label {
+        font-size: 0.7rem;
+    }
+    .time-wrapper .time {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 998px) {
+    .main-container {
+        max-width: 900px;
+    }
+    .main-title {
+        font-size: 2.5rem;
+    }
+    .main-title + p {
+        font-size: 1rem;
+        max-width: 37rem;
+    }
+
+    main {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    .recipe-portions-time {
+        order: 2;
+        position: sticky;
+        top: 1rem;
+        flex-direction: column;
+        min-width: 25%;
+        padding: 1.5rem;
+        box-shadow: 0 1rem 0.7rem rgba(0, 0, 0, 0.15);
+        border-radius: 7%;
+    }
+
+    .time-wrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer {
+        margin-top: 5rem;
+    }
+    footer > a:hover {
+        color: rgb(0, 0, 0);
+    }
+}
